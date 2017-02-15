@@ -3,7 +3,6 @@ var gl = null;
 function init() {
     var canvas = document.getElementById( "webgl-canvas" );
     var cone = null;
-    var n = 5;
 
     gl = WebGLUtils.setupWebGL( canvas );
 
