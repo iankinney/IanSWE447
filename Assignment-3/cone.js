@@ -1,8 +1,8 @@
 var gl = null;
+var cone = null;
 
 function init() {
     var canvas = document.getElementById( "webgl-canvas" );
-    var cone = null;
 
     gl = WebGLUtils.setupWebGL( canvas );
 
