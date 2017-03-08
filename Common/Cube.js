@@ -37,12 +37,12 @@ function Cube( vertexShaderId, fragmentShaderId ) {
             1, 4, 5,
             0, 4, 3,
             4, 3, 7,
-            /*6, 5, 7, 
+            6, 5, 7, 
             5, 7, 4,
             6, 2, 5,
             2, 5, 1,
             6, 7, 2,
-            7, 2, 3*/
+            7, 2, 3
         ])
     };
     this.indices.count = this.indices.values.length;
@@ -75,6 +75,6 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         gl.uniformMatrix4fv( MVLoc, gl.FALSE, flatten(this.MV) );
 
         // Draw the cube's base
-        gl.drawElements( gl.TRIANGLES, this.indices.count, gl.UNSIGNED_SHORT, 0 );
+        gl.drawElements( gl.POINTS, this.indices.count, gl.UNSIGNED_SHORT, 0 );
     }
 };
