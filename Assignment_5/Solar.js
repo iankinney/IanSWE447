@@ -151,6 +151,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+  planet.PointMode = true;
+  
   ms.push();
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -159,6 +161,7 @@ function render() {
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
   ms.pop();
+  
   window.requestAnimationFrame(render);
 }
 
