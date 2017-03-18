@@ -152,11 +152,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(data.year, data.axis);
+  ms.translate(data.distance, 0, 0);
+  ms.rotate(data.day, data.axis);
   ms.scale(data.radius);
-  ms.rotate(year, axis);
-  ms.translate(distance, 0, 0);
-  ms.rotate(day, axis);
-  ms.scale(Earth.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
