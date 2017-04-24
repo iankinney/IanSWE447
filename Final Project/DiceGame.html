@@ -21,7 +21,14 @@
 			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
-
+			
+			/* we need to add a light so we can see our cube - its almost
+			as if we're turning on a lightbulb within the room */
+			var light = new THREE.PointLight(0xFFFF00);
+			/* position the light so it shines on the cube (x, y, z) */
+			light.position.set(10, 0, 25);
+			scene.add(light);
+			
 			camera.position.z = 5;
 
 			var render = function () {
