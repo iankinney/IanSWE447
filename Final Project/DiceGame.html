@@ -54,11 +54,11 @@
 			dodec.position.x = 3;
 			
 			var light = new THREE.PointLight(0xFFFF00);
-			light.position.set(1, 0, 9);
+			light.position.set(9, 1, 2);
 			scene.add(light);
 			
 			var light2 = new THREE.PointLight(0xFFEE00);
-			light.position.set(1, 0, -9);
+			light.position.set(-9, 1, 2);
 			scene.add(light2);
 
 			camera.position.z = 5;
@@ -67,7 +67,7 @@
 
 			var render = function () {
   				requestAnimationFrame( render );
-				cube.rotation.x += .1;
+				cube.rotation.y += .1;
 				
 				tetra.rotation.x += .01;
 				tetra.rotation.y += .01;
