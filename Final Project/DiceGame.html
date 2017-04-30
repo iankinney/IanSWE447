@@ -18,7 +18,7 @@
 			document.body.appendChild( renderer.domElement );
 
 			var geometry = new THREE.BoxGeometry( 1, 1, 1);
-			var material = new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			cube.position.y = 2;
@@ -26,32 +26,36 @@
 			cube.rotation.z = .8;
 			
 			var geometry = new THREE.TetrahedronGeometry(1, 0);
-			var material = new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
 			var tetra = new THREE.Mesh( geometry, material );
 			scene.add( tetra );
 			tetra.position.y = -2;
 			tetra.position.x = -8;
 			
 			var geometry = new THREE.OctahedronGeometry(1, 0);
-			var material = new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
 			var octa = new THREE.Mesh( geometry, material );
 			scene.add( octa );
 			octa.position.y = -2;
 			octa.position.x = -3;
 			
 			var geometry = new THREE.IcosahedronGeometry(1, 0);
-			var material = new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
 			var icosa = new THREE.Mesh( geometry, material );
 			scene.add( icosa );
 			icosa.position.y = -2;
 			icosa.position.x = 3;
 			
 			var geometry = new THREE.DodecahedronGeometry(1, 0);
-			var material = new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
 			var dodec = new THREE.Mesh( geometry, material );
 			scene.add( dodec );
 			dodec.position.y = -2;
 			dodec.position.x = 8;
+			
+			var light = new THREE.PointLight(0xFFFF00);
+			light.position.set(1, 0, 2);
+			scene.add(light);
 
 			camera.position.z = 5;
 
@@ -59,8 +63,24 @@
 
 			var render = function () {
   				requestAnimationFrame( render );
-				cube.rotation.y += .1;
-
+				
+				tetra.rotation.x += .02;
+				tetra.rotation.y += .02;
+				tetra.rotation.z += .02;
+				
+				octa.rotation.x += .02;
+				octa.rotation.y += .02;
+				octa.rotation.z += .02;
+				
+				icosa.rotation.x += .02;
+				icosa.rotation.y += .02;
+				icosa.rotation.z += .02;
+				
+				dodec.rotation.x += .02;
+				dodec.rotation.y += .02;
+				dodec.rotation.z += .02;
+				
+				camera.updateProjectionMatrix();
   				renderer.render(scene, camera);
 			};
 
