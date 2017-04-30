@@ -17,19 +17,15 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 
-			var geometry = new THREE.BoxGeometry( 20, 20, 20);
-			var material = new THREE.MeshLambertMaterial( { color: 0xfd59d7 } );
+			var geometry = new THREE.BoxGeometry( 1, 1, 1);
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
-			cube.position.y = 30;
+			cube.position.y = 1;
 			cube.rotation.x = -.5;
 			cube.rotation.z = .5;
 
 			camera.position.z = 100;
-
-			var light = new THREE.PointLight( 0xFFFF00 );
-			light.position.set( 10, 0, 25 );
-			scene.add( light );
 
 
 
