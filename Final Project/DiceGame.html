@@ -17,13 +17,29 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 			
-			var colour = Math.random() * 0xffffff;
-			if (colour == 0x000000){
-				colour = Math.random() * 0xffffff;
+			var colour1 = Math.random() * 0xffffff;
+			if (colour1 == 0x000000){
+				colour1 = Math.random() * 0xffffff;
+			}
+			var colour2 = Math.random() * 0xffffff;
+			if (colour2 == 0x000000){
+				colour2 = Math.random() * 0xffffff;
+			}
+			var colour3 = Math.random() * 0xffffff;
+			if (colour3 == 0x000000){
+				colour3 = Math.random() * 0xffffff;
+			}
+			var colour4 = Math.random() * 0xffffff;
+			if (colour4 == 0x000000){
+				colour4 = Math.random() * 0xffffff;
+			}
+			var colour5 = Math.random() * 0xffffff;
+			if (colour5 == 0x000000){
+				colour5 = Math.random() * 0xffffff;
 			}
 			
 			var geometry = new THREE.BoxGeometry( 1, 1, 1);
-			var material = new THREE.MeshLambertMaterial( { color: colour } );
+			var material = new THREE.MeshLambertMaterial( { color: colour1 } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			cube.position.y = 2;
@@ -31,28 +47,28 @@
 			cube.rotation.z = .8;
 			
 			var geometry = new THREE.TetrahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: colour } );
+			var material = new THREE.MeshLambertMaterial( { color: colour2 } );
 			var tetra = new THREE.Mesh( geometry, material );
 			scene.add( tetra );
 			tetra.position.y = -2;
 			tetra.position.x = -8;
 			
 			var geometry = new THREE.OctahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: colour } );
+			var material = new THREE.MeshLambertMaterial( { color: colour3 } );
 			var octa = new THREE.Mesh( geometry, material );
 			scene.add( octa );
 			octa.position.y = -2;
 			octa.position.x = -3;
 			
 			var geometry = new THREE.IcosahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: colour } );
+			var material = new THREE.MeshLambertMaterial( { color: colour4 } );
 			var icosa = new THREE.Mesh( geometry, material );
 			scene.add( icosa );
 			icosa.position.y = -2;
 			icosa.position.x = 8;
 			
 			var geometry = new THREE.DodecahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: colour } );
+			var material = new THREE.MeshLambertMaterial( { color: colour5 } );
 			var dodec = new THREE.Mesh( geometry, material );
 			scene.add( dodec );
 			dodec.position.y = -2;
