@@ -44,18 +44,22 @@
 			var icosa = new THREE.Mesh( geometry, material );
 			scene.add( icosa );
 			icosa.position.y = -2;
-			icosa.position.x = 3;
+			icosa.position.x = 8;
 			
 			var geometry = new THREE.DodecahedronGeometry(1, 0);
 			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
 			var dodec = new THREE.Mesh( geometry, material );
 			scene.add( dodec );
 			dodec.position.y = -2;
-			dodec.position.x = 8;
+			dodec.position.x = 3;
 			
 			var light = new THREE.PointLight(0xFFFF00);
 			light.position.set(1, 0, 2);
 			scene.add(light);
+			
+			var light2 = new THREE.PointLight(0xFFEE00);
+			light.position.set(1, 0, 2);
+			scene.add(light2);
 
 			camera.position.z = 5;
 
@@ -64,21 +68,21 @@
 			var render = function () {
   				requestAnimationFrame( render );
 				
-				tetra.rotation.x += .02;
-				tetra.rotation.y += .02;
-				tetra.rotation.z += .02;
+				tetra.rotation.x += .01;
+				tetra.rotation.y += .01;
+				tetra.rotation.z += .01;
 				
 				octa.rotation.x += .02;
 				octa.rotation.y += .02;
 				octa.rotation.z += .02;
 				
-				icosa.rotation.x += .02;
-				icosa.rotation.y += .02;
-				icosa.rotation.z += .02;
+				icosa.rotation.x += .03;
+				icosa.rotation.y += .03;
+				icosa.rotation.z += .03;
 				
-				dodec.rotation.x += .02;
-				dodec.rotation.y += .02;
-				dodec.rotation.z += .02;
+				dodec.rotation.x += .04;
+				dodec.rotation.y += .04;
+				dodec.rotation.z += .04;
 				
 				camera.updateProjectionMatrix();
   				renderer.render(scene, camera);
