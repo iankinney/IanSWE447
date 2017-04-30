@@ -16,9 +16,14 @@
 			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
-
+			
+			var colour = Math.random() * 0xffffff;
+			if (colour == 0x000000){
+				colour = Math.random() * 0xffffff;
+			}
+			
 			var geometry = new THREE.BoxGeometry( 1, 1, 1);
-			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: colour } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			cube.position.y = 2;
@@ -26,28 +31,28 @@
 			cube.rotation.z = .8;
 			
 			var geometry = new THREE.TetrahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: colour } );
 			var tetra = new THREE.Mesh( geometry, material );
 			scene.add( tetra );
 			tetra.position.y = -2;
 			tetra.position.x = -8;
 			
 			var geometry = new THREE.OctahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: colour } );
 			var octa = new THREE.Mesh( geometry, material );
 			scene.add( octa );
 			octa.position.y = -2;
 			octa.position.x = -3;
 			
 			var geometry = new THREE.IcosahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: colour } );
 			var icosa = new THREE.Mesh( geometry, material );
 			scene.add( icosa );
 			icosa.position.y = -2;
 			icosa.position.x = 8;
 			
 			var geometry = new THREE.DodecahedronGeometry(1, 0);
-			var material = new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } );
+			var material = new THREE.MeshLambertMaterial( { color: colour } );
 			var dodec = new THREE.Mesh( geometry, material );
 			scene.add( dodec );
 			dodec.position.y = -2;
