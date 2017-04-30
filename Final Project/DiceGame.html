@@ -50,35 +50,35 @@
 			var tetra = new THREE.Mesh( geometry, material );
 			scene.add( tetra );
 			tetra.position.y = -2;
-			tetra.position.x = -8;
+			tetra.position.x = -6;
 			
 			var geometry = new THREE.OctahedronGeometry(1, 0);
 			var material = new THREE.MeshLambertMaterial( { color: colour3 } );
 			var octa = new THREE.Mesh( geometry, material );
 			scene.add( octa );
 			octa.position.y = -2;
-			octa.position.x = -3;
+			octa.position.x = -2;
 			
 			var geometry = new THREE.IcosahedronGeometry(1, 0);
 			var material = new THREE.MeshLambertMaterial( { color: colour4 } );
 			var icosa = new THREE.Mesh( geometry, material );
 			scene.add( icosa );
 			icosa.position.y = -2;
-			icosa.position.x = 8;
+			icosa.position.x = 6;
 			
 			var geometry = new THREE.DodecahedronGeometry(1, 0);
 			var material = new THREE.MeshLambertMaterial( { color: colour5 } );
 			var dodec = new THREE.Mesh( geometry, material );
 			scene.add( dodec );
 			dodec.position.y = -2;
-			dodec.position.x = 3;
+			dodec.position.x = 2;
 			
 			var light = new THREE.PointLight(0xFFFF00);
-			light.position.set(9, -3, 5);
+			light.position.set(7, -3, 5);
 			scene.add(light);
 			
 			var light2 = new THREE.PointLight(0xFFEE00);
-			light.position.set(-9, 1, 5);
+			light.position.set(-7, 1, 5);
 			scene.add(light2);
 
 			camera.position.z = 5;
