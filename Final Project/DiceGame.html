@@ -31,8 +31,8 @@
 
 			var render = function () {
   				requestAnimationFrame( render );
-				cube.rotation.y = .1;
-				cube.rotation.z = .1;
+				cube.rotation.y += .1;
+				cube.rotation.z += .1;
 
   				renderer.render(scene, camera);
 			};
