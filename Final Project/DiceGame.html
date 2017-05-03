@@ -11,7 +11,7 @@
 		<script src="../Common/three.js"></script>
 		<script>
 			var scene = new THREE.Scene();
-			scene.background = new THREE.Color( 0xff0000 );
+			scene.background = new THREE.Color( 0xffffff );
 			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
 			var renderer = new THREE.WebGLRenderer();
@@ -77,10 +77,6 @@
 			var light = new THREE.PointLight(0xFFFF00);
 			light.position.set(8, 0, 5);
 			scene.add(light);
-			
-			var light2 = new THREE.PointLight(0xFFEE00);
-			light.position.set(-8, 0, 5);
-			scene.add(light2);
 
 			camera.position.z = 5;
 
