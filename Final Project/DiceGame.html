@@ -10,12 +10,6 @@
 	<body>
 		<script src="../Common/three.js"></script>
 		<script>
-			var cubeSpeed = math.random() * 3;
-			var tetraSpeed = math.random() * 3;
-			var octaSpeed = math.random() * 3;
-			var icosaSpeed = math.random() * 3;
-			var dodecSpeed = math.random() * 3;
-			
 			var scene = new THREE.Scene();
 			scene.background = new THREE.Color( 0xD3D3D3 );
 			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -93,25 +87,25 @@
 
 			var render = function () {
   				requestAnimationFrame( render );
-				cube.rotation.x += cubeSpeed;
-				cube.rotation.y += cubeSpeed;
-				cube.rotation.z += cubeSpeed;
+				cube.rotation.x += Math.random() * 3;
+				cube.rotation.y += Math.random() * 3;
+				cube.rotation.z += Math.random() * 3;
 				
-				tetra.rotation.x += tetraSpeed;
-				tetra.rotation.y += tetraSpeed;
-				tetra.rotation.z += tetraSpeed;
+				tetra.rotation.x += Math.random() * 3;
+				tetra.rotation.y += Math.random() * 3;
+				tetra.rotation.z += Math.random() * 3;
 				
-				octa.rotation.x += octaSpeed;
-				octa.rotation.y += octaSpeed;
-				octa.rotation.z += octaSpeed;
+				octa.rotation.x += Math.random() * 3;
+				octa.rotation.y += Math.random() * 3;
+				octa.rotation.z += Math.random() * 3;
 				
-				icosa.rotation.x += icosaSpeed;
-				icosa.rotation.y += icosaSpeed;
-				icosa.rotation.z += icosaSpeed;
+				icosa.rotation.x += Math.random() * 3;
+				icosa.rotation.y += Math.random() * 3;
+				icosa.rotation.z += Math.random() * 3;
 				
-				dodec.rotation.x += dodecSpeed;
-				dodec.rotation.y += dodecSpeed;
-				dodec.rotation.z += dodecSpeed;
+				dodec.rotation.x += Math.random() * 3;
+				dodec.rotation.y += Math.random() * 3;
+				dodec.rotation.z += Math.random() * 3;
 				
 				camera.updateProjectionMatrix();
   				renderer.render(scene, camera);
