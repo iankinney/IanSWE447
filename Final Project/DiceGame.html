@@ -87,25 +87,25 @@
 
 			var render = function () {
   				requestAnimationFrame( render );
-				cube.rotation.x += .05;
-				cube.rotation.y += .065;
-				cube.rotation.z += .08;
+				cube.rotation.x += math.random() * 3;
+				cube.rotation.y += math.random() * 3;
+				cube.rotation.z += math.random() * 3;
 				
-				tetra.rotation.x += .01;
-				tetra.rotation.y += .01;
-				tetra.rotation.z += .01;
+				tetra.rotation.x += math.random() * 3;
+				tetra.rotation.y += math.random() * 3;
+				tetra.rotation.z += math.random() * 3;
 				
-				octa.rotation.x += .02;
-				octa.rotation.y += .02;
-				octa.rotation.z += .02;
+				octa.rotation.x += math.random() * 3;
+				octa.rotation.y += math.random() * 3;
+				octa.rotation.z += math.random() * 3;
 				
-				icosa.rotation.x += .03;
-				icosa.rotation.y += .03;
-				icosa.rotation.z += .03;
+				icosa.rotation.x += math.random() * 3;
+				icosa.rotation.y += math.random() * 3;
+				icosa.rotation.z += math.random() * 3;
 				
-				dodec.rotation.x += .04;
-				dodec.rotation.y += .04;
-				dodec.rotation.z += .04;
+				dodec.rotation.x += math.random() * 3;
+				dodec.rotation.y += math.random() * 3;
+				dodec.rotation.z += math.random() * 3;
 				
 				camera.updateProjectionMatrix();
   				renderer.render(scene, camera);
