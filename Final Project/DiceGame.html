@@ -75,8 +75,11 @@
 			dodec.position.x = 2;
 			
 			var light = new THREE.PointLight(0xFFFF00);
-			light.position.set(8, 0, 5);
+			light.position.set(8, -1, 5);
 			scene.add(light);
+			var light2 = new THREE.PointLight(0xFFFF00);
+			light2.position.set(-8, 1, 5);
+			scene.add(light2);
 
 			camera.position.z = 5;
 
